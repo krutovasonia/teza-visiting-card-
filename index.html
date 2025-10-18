@@ -15,33 +15,29 @@
         body {
             font-family: 'Inter', Arial, sans-serif;
             background: linear-gradient(to bottom, #dbefff 0%, rgb(195, 223, 255) 40%, #186DB3 100%);
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: auto;
-            padding: 10px;
+            overflow: hidden;
         }
 
         .business-card {
             background: white;
-            width: 100%;
+            width: 90vw;
             max-width: 400px;
-            height: auto;
-            min-height: 95vh;
+            height: 95vh;
+            max-height: 850px;
             overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
-            margin: 20px 0;
         }
 
         /* Верхнее изображение */
         .top-image {
             width: 100%;
-            height: 25vh;
-            min-height: 150px;
-            max-height: 200px;
+            height: 25%;
             overflow: hidden;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
@@ -68,22 +64,6 @@
             z-index: 2;
         }
 
-        @media (max-width: 480px) {
-            .avatar-container {
-                width: 100px;
-                height: 100px;
-                top: 12%;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .avatar-container {
-                width: 90px;
-                height: 90px;
-                top: 10%;
-            }
-        }
-
         .avatar {
             width: 100%;
             height: 100%;
@@ -101,18 +81,6 @@
             padding: 0 20px;
         }
 
-        @media (max-width: 480px) {
-            .signature {
-                top: calc(12% + 110px);
-            }
-        }
-
-        @media (max-width: 360px) {
-            .signature {
-                top: calc(10% + 100px);
-            }
-        }
-
         .name {
             font-size: 22px;
             font-weight: 600;
@@ -120,42 +88,11 @@
             margin-bottom: 4px;
         }
 
-        @media (max-width: 480px) {
-            .name {
-                font-size: 20px;
-            margin-bottom: 2px;
-            line-height: 1.2;
-            padding: 0 10px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            text-align: center;
-            max-width: 100%;
-            box-sizing: border-box;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-        }
-
         .title {
             font-size: 10px;
             font-weight: 400;
             color: #186DB3;
             line-height: 1.3;
-        }
-
-        @media (max-width: 480px) {
-            .title {
-                font-size: 9px;
-                line-height: 1.2;
-                padding: 0 10px;
-            }
         }
 
         /* Прямоугольный блок */
@@ -173,21 +110,6 @@
             padding: 0 15px 0 15px;
         }
 
-        @media (max-width: 480px) {
-            .blue-block {
-                top: calc(12% + 180px);
-                height: 55px;
-                padding: 0 10px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .blue-block {
-                top: calc(10% + 170px);
-                height: 50px;
-            }
-        }
-
         /* Картинка слева */
         .left-image {
             display: flex;
@@ -200,30 +122,12 @@
             height: auto;
         }
 
-        @media (max-width: 480px) {
-            .left-image img {
-                width: 70px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .left-image img {
-                width: 60px;
-            }
-        }
-
         /* Правые картинки */
         .right-images {
             display: flex;
             gap: 15px;
             align-items: center;
             margin-left: auto;
-        }
-
-        @media (max-width: 480px) {
-            .right-images {
-                gap: 10px;
-            }
         }
 
         .right-image {
@@ -237,18 +141,6 @@
             height: auto;
         }
 
-        @media (max-width: 480px) {
-            .right-image img {
-                width: 35px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .right-image img {
-                width: 30px;
-            }
-        }
-
         /* Текстовый блок с формулой успеха */
         .formula-block {
             position: absolute;
@@ -260,18 +152,6 @@
             font-family: 'Inter', sans-serif;
         }
 
-        @media (max-width: 480px) {
-            .formula-block {
-                top: calc(12% + 245px);
-            }
-        }
-
-        @media (max-width: 360px) {
-            .formula-block {
-                top: calc(10% + 230px);
-            }
-        }
-
         .formula-title {
             font-size: 15px;
             font-weight: 600;
@@ -280,32 +160,12 @@
             line-height: 1.3;
         }
 
-        @media (max-width: 480px) {
-            .formula-title {
-                font-size: 14px;
-                margin-bottom: 8px;
-                line-height: 1.2;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .formula-title {
-                font-size: 13px;
-            }
-        }
-
         .formula-divider {
             width: 50px;
             height: 1px;
             background: #186DB3;
             margin: 0 auto 10px auto;
             opacity: 0.7;
-        }
-
-        @media (max-width: 480px) {
-            .formula-divider {
-                margin-bottom: 8px;
-            }
         }
 
         .formula-content {
@@ -321,24 +181,11 @@
             margin-left: 0.1px;
         }
 
-        @media (max-width: 480px) {
-            .formula-list {
-                font-size: 9px;
-                line-height: 1.1;
-            }
-        }
-
         .formula-item {
             margin-bottom: 10px;
             padding-left: 0;
             text-align: left;
             margin-left: 0.1px;
-        }
-
-        @media (max-width: 480px) {
-            .formula-item {
-                margin-bottom: 8px;
-            }
         }
 
         .formula-stats {
@@ -348,13 +195,6 @@
             text-align: left;
             line-height: 1.5;
             margin-left: 0.1px;
-        }
-
-        @media (max-width: 480px) {
-            .formula-stats {
-                font-size: 9px;
-                margin-top: 12px;
-            }
         }
 
         /* ЦЕНТРИРОВАННЫЙ БЛОК С QR И КОНТАКТАМИ */
@@ -370,13 +210,6 @@
             gap: 18px;
         }
 
-        @media (max-width: 480px) {
-            .bottom-section {
-                bottom: 25px;
-                gap: 15px;
-            }
-        }
-
         .contacts-container {
             display: flex;
             justify-content: center;
@@ -384,15 +217,6 @@
             gap: 40px;
             margin-left: 70px;
             width: 100%;
-        }
-
-        @media (max-width: 480px) {
-            .contacts-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                margin-left: 0;
-            }
         }
 
         .qr-container {
@@ -407,26 +231,12 @@
             height: auto;
         }
 
-        @media (max-width: 480px) {
-            .qr-code {
-                width: 110px;
-            }
-        }
-
         .right-column-icons {
             display: flex;
             flex-direction: column;
             gap: 15px;
             margin-top: 10px;
             margin-right: 60px;
-        }
-
-        @media (max-width: 480px) {
-            .right-column-icons {
-                margin-top: 0;
-                margin-right: 0;
-                gap: 12px;
-            }
         }
 
         .column-item {
@@ -442,14 +252,6 @@
             border-radius: 4px;
             transition: all 0.3s ease;
             position: relative;
-        }
-
-        @media (max-width: 480px) {
-            .column-item {
-                font-size: 10px;
-                gap: 8px;
-                padding: 3px 6px;
-            }
         }
 
         .column-item:hover {
@@ -473,21 +275,8 @@
             flex-shrink: 0;
         }
 
-        @media (max-width: 480px) {
-            .column-icon {
-                width: 14px;
-                height: 14px;
-            }
-        }
-
         .column-text {
             white-space: nowrap;
-        }
-
-        @media (max-width: 360px) {
-            .column-text {
-                font-size: 9px;
-            }
         }
 
         /* Большая вытянутая кнопка */
@@ -512,41 +301,8 @@
             max-width: 400px;
         }
 
-        @media (max-width: 480px) {
-            .learn-more-btn {
-                font-size: 13px;
-                padding: 12px 18px;
-                border-radius: 25px;
-            }
-        }
-
         .learn-more-btn:hover {
             background: #145a9e;
-        }
-
-        /* Улучшения для сенсорных устройств */
-        @media (hover: none) and (pointer: coarse) {
-            .column-item:hover {
-                background: transparent;
-            }
-            
-            .column-item:hover::after {
-                display: none;
-            }
-            
-            .learn-more-btn:hover {
-                background: #186DB3;
-            }
-            
-            .learn-more-btn:active {
-                background: #145a9e;
-            }
-            
-            .right-image:active img, 
-            .left-image:active img {
-                transform: scale(0.95);
-                transition: transform 0.1s;
-            }
         }
     </style>
 </head>
