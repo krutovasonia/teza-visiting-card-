@@ -14,29 +14,30 @@
 
         body {
             font-family: 'Inter', Arial, sans-serif;
-            background: linear-gradient(to bottom, #dbefff 0%, rgb(195, 223, 255) 40%, #186DB3 100%);
-            min-height: 100vh;
+            background: linear-gradient(to bottom, #9dd3ff 0%, #a5d7ff 40%, #186DB3 100%);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            overflow: hidden;
         }
 
         .business-card {
             background: white;
             width: 90vw;
             max-width: 400px;
-            height: 780px;
+            height: 95vh;
+            max-height: 850px;
+            overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
-            overflow: hidden;
         }
 
         /* Верхнее изображение */
         .top-image {
             width: 100%;
-            height: 200px;
+            height: 25%;
             overflow: hidden;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
@@ -51,13 +52,13 @@
         /* Аватарка */
         .avatar-container {
             position: absolute;
-            top: 150px;
+            top: 15%;
             left: 50%;
             transform: translateX(-50%);
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 4px solid #186DB3;
+            border: 3.5px solid #186DB3;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             z-index: 2;
@@ -72,7 +73,7 @@
         /* Подпись */
         .signature {
             position: absolute;
-            top: 285px;
+            top: calc(15% + 125px);
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -81,35 +82,35 @@
         }
 
         .name {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
             color: #186DB3;
-            margin-bottom: 5px;
-            line-height: 1.2;
+            margin-bottom: 4px;
         }
 
         .title {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 400;
             color: #186DB3;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         /* Прямоугольный блок */
         .blue-block {
             position: absolute;
-            top: 350px;
+            top: calc(15% + 195px);
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
             height: 60px;
-            background-color: rgba(24, 109, 179, 0.15);
+            background-color: rgba(24, 109, 179, 0.2);
             border-radius: 100px;
             display: flex;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 15px 0 15px;
         }
 
+        /* Картинка слева */
         .left-image {
             display: flex;
             align-items: center;
@@ -121,6 +122,7 @@
             height: auto;
         }
 
+        /* Правые картинки */
         .right-images {
             display: flex;
             gap: 15px;
@@ -142,74 +144,85 @@
         /* Текстовый блок с формулой успеха */
         .formula-block {
             position: absolute;
-            top: 430px;
+            top: calc(15% + 265px);
             left: 50%;
             transform: translateX(-50%);
             width: 85%;
             color: #186DB3;
-            text-align: center;
+            font-family: 'Inter', sans-serif;
         }
 
         .formula-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            margin-bottom: 12px;
+            text-align: center;
+            margin-bottom: 15px;
             line-height: 1.3;
         }
 
         .formula-divider {
-            width: 60px;
-            height: 2px;
+            width: 50px;
+            height: 1px;
             background: #186DB3;
-            margin: 0 auto 15px auto;
+            margin: 0 auto 18px auto;
             opacity: 0.7;
         }
 
         .formula-content {
-            text-align: left;
+            text-align: center;
         }
 
         .formula-list {
-            font-size: 11px;
-            line-height: 1.5;
-            margin-bottom: 10px;
+            font-size: 10px;
+            line-height: 1.2;
+            text-align: left;
+            display: inline-block;
+            margin-left: 0;
+            margin-left: 0.1px;
         }
 
         .formula-item {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            padding-left: 0;
+            text-align: left;
+            margin-left: 0.1px;
         }
 
         .formula-stats {
-            font-size: 11px;
-            font-weight: 500;
-            line-height: 1.4;
+            font-size: 10px;
+            font-weight: 400;
+            margin-top: 15px;
+            text-align: left;
+            line-height: 1.5;
+            margin-left: 0.1px;
         }
 
-        /* Нижний блок с контактами */
+        /* ЦЕНТРИРОВАННЫЙ БЛОК С QR И КОНТАКТАМИ */
         .bottom-section {
             position: absolute;
-            bottom: 25px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .contacts-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
+            gap: 40px;
             width: 100%;
-            padding: 0 10px;
         }
 
         .qr-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 10px;
         }
 
         .qr-code {
@@ -217,45 +230,59 @@
             height: auto;
         }
 
-        .contacts-list {
+        .right-column-icons {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
-        .contact-item {
+        .column-item {
             display: flex;
             align-items: center;
             gap: 8px;
             text-decoration: none;
             color: #E79A46;
-            font-size: 11px;
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
             font-weight: 400;
-            padding: 5px;
+            padding: 4px 8px;
             border-radius: 4px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .contact-item:hover {
+        .column-item:hover {
             background: rgba(24, 109, 179, 0.1);
         }
 
-        .contact-icon {
-            width: 16px;
-            height: 16px;
+        .column-item:hover::after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #186DB3;
+            border-radius: 1px;
         }
 
-        .contact-text {
+        .column-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .column-text {
             white-space: nowrap;
         }
 
-        /* Кнопка */
+        /* Большая вытянутая кнопка */
         .learn-more-btn {
             background: #186DB3;
             color: white;
             font-family: 'Inter', sans-serif;
-            font-weight: 400;
+            font-weight: 350;
             font-size: 14.5px;
             padding: 15px 22px;
             border: none;
@@ -274,77 +301,6 @@
 
         .learn-more-btn:hover {
             background: #145a9e;
-        }
-
-        /* Адаптация для телефонов */
-        @media (max-width: 480px) {
-            body {
-                padding: 15px;
-            }
-            
-            .business-card {
-                height: 780px;
-                max-width: 400px;
-            }
-            
-            .top-image {
-                height: 200px;
-            }
-            
-            .avatar-container {
-                top: 150px;
-                width: 120px;
-                height: 120px;
-            }
-            
-            .signature {
-                top: 285px;
-            }
-            
-            .name {
-                font-size: 24px;
-            }
-            
-            .blue-block {
-                top: 350px;
-                height: 60px;
-                width: 90%;
-            }
-            
-            .formula-block {
-                top: 430px;
-                width: 85%;
-            }
-            
-            .formula-title {
-                font-size: 16px;
-            }
-            
-            .contacts-container {
-                gap: 30px;
-                padding: 0 5px;
-            }
-            
-            .qr-code {
-                width: 130px;
-            }
-            
-            .contact-item {
-                font-size: 11px;
-            }
-            
-            .learn-more-btn {
-                max-width: 400px;
-                font-size: 14.5px;
-                padding: 15px 22px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .business-card {
-                height: 780px;
-                max-width: 400px;
-            }
         }
     </style>
 </head>
@@ -368,10 +324,12 @@
 
         <!-- Прямоугольный блок с картинками -->
         <div class="blue-block">
+            <!-- Картинка слева -->
             <div class="left-image" id="downloadBtn">
                 <img src="images/Group 25.png" alt="Скачать">
             </div>
 
+            <!-- Правые картинки -->
             <div class="right-images">
                 <div class="right-image" id="callBtn">
                     <img src="images/Group 11.png" alt="Позвонить">
@@ -395,32 +353,32 @@
             
             <div class="formula-content">
                 <div class="formula-list">
-                    <div class="formula-item">Разбираем ugc и как его использовать в маркетинге</div>
-                    <div class="formula-item">Внедряем сквозную аналитику, чтобы вы видели реальный ROI с каждого товара</div>
+                    <div class="formula-item">Разбираем ugc и как его использовать<p>в маркетинге</div>
+                    <div class="formula-item">Внедряем сквозную аналитику, чтобы<p>вы видели реальный ROI с каждого товара</div>
+                    <div class="formula-stats">Увеличиваем ROAS до 400%, удерживая<p>CPA ниже 500</div>
                 </div>
-                <div class="formula-stats">Увеличиваем ROAS до 400%, удерживая CPA ниже 500</div>
             </div>
         </div>
 
-        <!-- Нижний блок с контактами -->
+        <!-- ЦЕНТРИРОВАННЫЙ БЛОК С QR И КОНТАКТАМИ -->
         <div class="bottom-section">
             <div class="contacts-container">
                 <div class="qr-container">
                     <img src="images/Group.png" alt="QR код" class="qr-code">
                 </div>
 
-                <div class="contacts-list">
-                    <a href="tel:+79776331974" class="contact-item">
-                        <img src="images/Vector.png" alt="Телефон" class="contact-icon">
-                        <span class="contact-text">+7 (977) 633-19-74</span>
+                <div class="right-column-icons">
+                    <a href="tel:+79776331974" class="column-item">
+                        <img src="images/Vector.png" alt="Телефон" class="column-icon">
+                        <span class="column-text">+7 (977) 633-19-74</span>
                     </a>
-                    <a href="https://mail.yandex.ru/?uid=1130000069905&login=teza-agency#compose" class="contact-item" target="_blank">
-                        <img src="images/Group 17.png" alt="Email" class="contact-icon">
-                        <span class="contact-text">teza-agency@yandex.ru</span>
+                    <a href="https://mail.yandex.ru/?uid=1130000069905&login=teza-agency#compose" class="column-item" target="_blank">
+                        <img src="images/Group 17.png" alt="Email" class="column-icon">
+                        <span class="column-text">teza-agency@yandex.ru</span>
                     </a>
-                    <a href="https://t.me/Teza_ozon" class="contact-item" target="_blank">
-                        <img src="images/Group 10.png" alt="Telegram" class="contact-icon">
-                        <span class="contact-text">@Teza_ozon</span>
+                    <a href="https://t.me/Teza_ozon" class="column-item" target="_blank">
+                        <img src="images/Group 10.png" alt="Telegram" class="column-icon">
+                        <span class="column-text">@Teza_ozon</span>
                     </a>
                 </div>
             </div>
@@ -431,6 +389,7 @@
 
     <script>
         document.getElementById('downloadBtn').addEventListener('click', function() {
+            console.log('Клик по кнопке скачивания');
             const link = document.createElement('a');
             link.href = 'iPhone 16 - 4.pdf';
             link.download = 'iPhone 16 - 4.pdf';
@@ -440,14 +399,22 @@
         });
 
         document.getElementById('callBtn').addEventListener('click', function() {
-            window.open('tel:+79776331974');
+            console.log('Попытка звонка на номер: +7 (977) 633-19-74');
+            const phoneNumber = '+79776331974';
+            const telLink = document.createElement('a');
+            telLink.href = 'tel:' + phoneNumber;
+            telLink.click();
+            alert('Наберите номер: +7 (977) 633-19-74');
         });
 
         document.getElementById('emailBtn').addEventListener('click', function() {
+            console.log('Переход на Яндекс почту: teza-agency@yandex.ru');
             window.open('https://mail.yandex.ru/?uid=1130000069905&login=teza-agency#compose', '_blank');
         });
 
         document.getElementById('shareBtn').addEventListener('click', function() {
+            console.log('Отправка визитки');
+            
             const shareText = `Ксения Самсонова
 Основательница агентства performance маркетинга Теза
 
@@ -458,20 +425,46 @@
 Соберите свою формулу успеха Performance-маркетинг на Ozon:
 • Разбираем UGC и как его использовать в маркетинге
 • Внедряем сквозную аналитику для реального ROI
-• Увеличиваем ROAS до 400%, удерживая CPA ниже 500`;
+• Увеличиваем ROAS до 400%, удерживая CPA ниже 500
+
+Ссылка на визитку: ${window.location.href}`;
 
             if (navigator.share) {
                 navigator.share({
                     title: 'Визитка Ксении Самсоновой',
                     text: shareText,
                     url: window.location.href
+                })
+                .then(() => console.log('Визитка успешно отправлена'))
+                .catch((error) => {
+                    console.log('Ошибка отправки через Web Share API:', error);
+                    fallbackShare(shareText);
                 });
             } else {
-                navigator.clipboard.writeText(shareText).then(() => {
-                    alert('Визитка скопирована в буфер обмена!');
-                });
+                fallbackShare(shareText);
             }
         });
+
+        function fallbackShare(shareText) {
+            const textArea = document.createElement('textarea');
+            textArea.value = shareText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            textArea.setSelectionRange(0, 99999);
+            
+            try {
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    alert('Визитка скопирована в буфер обмена! Вставьте её в сообщение и отправьте.');
+                } else {
+                    throw new Error('Copy failed');
+                }
+            } catch (err) {
+                alert('Скопируйте текст визитки:\n\n' + shareText);
+            }
+        }
     </script>
 </body>
 </html>
